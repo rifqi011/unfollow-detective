@@ -56,10 +56,12 @@ document.getElementById("checkButton").addEventListener("click", async () => {
 	localStorage.setItem("followers", JSON.stringify(followers))
 	localStorage.setItem("following", JSON.stringify(following))
 
-	const notFollowingBack = following.filter((user) => !followers.includes(user))
+    const notFollowingBack = following.filter((user) => !followers.includes(user))
+    
+    const notFollowingBackValue = document.getElementById("not-following-back-value")
+    notFollowingBackValue.textContent = notFollowingBack.length
 
-	const resultsDiv = document.getElementById("results-list")
-	resultsDiv.innerHTML = `<p>People you follow who don't follow you back (${notFollowingBack.length}):</p>`
+    const resultsDiv = document.getElementById("results-list")
 	if (notFollowingBack.length === 0) {
 		resultsDiv.innerHTML += `<p>Great! Everyone you follow is following you back.</p>`
 	} else {
