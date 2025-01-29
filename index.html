@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Unfollow Detective</title>
+		<link rel="stylesheet" href="style.css" />
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header id="header" class="container flex-row header">
+			<a href="#" class="logo">Unfollow Detective</a>
+		</header>
+
+		<section id="home" class="container home flex-col">
+			<div class="headline flex-col">
+				<h1>Unfollow Detective</h1>
+				<p>Upload your Instagram data files:</p>
+			</div>
+
+			<div class="upload-container flex-col">
+				<div class="upload-item flex-col">
+					<p>Upload your followers file:</p>
+					<label for="followersFile" class="flex-row button button-primary button-upload"><i class="bx bx-upload"></i>Upload file</label>
+					<input type="file" id="followersFile" class="input-file" accept=".json" />
+				</div>
+				<div class="upload-item flex-col">
+					<p>Upload your following file:</p>
+                    <label for="followingFile" class="flex-row button button-primary button-upload"><i class="bx bx-upload"></i>Upload file</label>
+					<input type="file" id="followingFile" class="input-file" accept=".json" />
+				</div>
+			</div>
+
+            <div class="flex-row button-container">
+                <button id="checkButton" class="button button-primary button-check">Check</button>
+                <button id="resetButton" class="button button-primary button-check">Reset</button>
+            </div>
+
+			<p>We won't save data you upload.</p>
+		</section>
+
+        <section id="results" class="result container flex-col hidden">
+            <h2>Results</h2>
+
+            <div id="results-list">
+
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+	</body>
+</html>
