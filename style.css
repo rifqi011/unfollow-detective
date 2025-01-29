@@ -115,10 +115,15 @@ body {
     cursor: pointer;
     border-radius: .5rem;
     flex: 1 1 1;
+    color: var(--white);
 }
 
 .button-primary i {
     font-size: 1.5rem;  
+}
+
+.section-title {
+    font-size: 2rem;
 }
 
 /* Header */
@@ -174,4 +179,21 @@ body {
 .button-check {
     font-size: 20px;
     padding-inline: 2rem;
+}
+
+/* Results */
+.result {
+    padding-top: 3rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.result-value {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-value p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
 }

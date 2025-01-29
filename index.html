@@ -26,27 +26,33 @@
 				</div>
 				<div class="upload-item flex-col">
 					<p>Upload your following file:</p>
-                    <label for="followingFile" class="flex-row button button-primary button-upload"><i class="bx bx-upload"></i>Upload file</label>
+					<label for="followingFile" class="flex-row button button-primary button-upload"><i class="bx bx-upload"></i>Upload file</label>
 					<input type="file" id="followingFile" class="input-file" accept=".json" />
 				</div>
 			</div>
 
-            <div class="flex-row button-container">
-                <button id="checkButton" class="button button-primary button-check">Check</button>
-                <button id="resetButton" class="button button-primary button-check">Reset</button>
-            </div>
+			<div class="flex-row button-container">
+				<button id="checkButton" class="button button-primary button-check">Check</button>
+				<button id="resetButton" class="button button-primary button-check">Reset</button>
+			</div>
 
 			<p>We won't save data you upload.</p>
 		</section>
 
-        <section id="results" class="result container flex-col hidden">
-            <h2>Results</h2>
+		<section id="results" class="result container flex-col hidden">
+			<h2 class="section-title">Results</h2>
 
-            <div id="results-list">
+			<div class="results-container flex-col">
+				<div class="flex-row result-value">
+					<p>Not following you back: </p>
 
-            </div>
-        </section>
+                    <p id="not-following-back-value" class="button-primary">0</p>
+				</div>
 
-        <script src="script.js"></script>
+				<ul id="results-list"></ul>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
 	</body>
 </html>
