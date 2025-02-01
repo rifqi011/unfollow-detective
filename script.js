@@ -67,7 +67,11 @@ document.getElementById("checkButton").addEventListener("click", async () => {
 	} else {
 		notFollowingBack.forEach((user) => {
 			const userLink = `https://www.instagram.com/${user}`
-			resultsDiv.innerHTML += `<p>${user} - <a href="${userLink}" target="_blank">Profile</a></p>`
+			resultsDiv.innerHTML += `<li class="result-item flex-row">
+                                        <p class="result-name">@${user}</p>
+                                        <a href="${userLink}" target="_blank" class="button-primary result-button">View</a>
+                                    </li>`
+            resultsDiv.classList.remove("hidden")
 		})
 		resultSection.classList.remove("hidden")
 	}
@@ -103,6 +107,6 @@ window.addEventListener("load", () => {
 		document.getElementById("followingFile").value = ""
 		localStorage.removeItem("followers")
 		localStorage.removeItem("following")
-		document.getElementById("results").innerHTML = ""
+		document.getElementById("results-list").innerHTML = ""
 	}
 })

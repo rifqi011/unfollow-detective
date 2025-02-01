@@ -6,8 +6,8 @@
 	--font-family: "Figtree", sans-serif;
 
 	--white: #fff;
+    --blue: #0095f6;
     --gradient: linear-gradient(120deg, rgba(249,206,52,1) 0%, rgba(238,42,123,1) 50%, rgba(98,40,215,1) 100%);
-    --gradient-2 :linear-gradient(315deg,#60a5fa,#2563eb);
 }
 
 /* Reset */
@@ -106,7 +106,7 @@ body {
 }
 
 .button-primary {
-    background: var(--gradient-2);
+    background: var(--blue);
     justify-content: space-between;
     align-self: center;
     padding: 0.5rem 1rem;
@@ -183,9 +183,13 @@ body {
 
 /* Results */
 .result {
-    padding-top: 3rem;
+    padding-block: 3rem;
     gap: 2rem;
     text-align: center;
+}
+
+.results-container {
+    gap: 2rem;
 }
 
 .result-value {
@@ -196,4 +200,30 @@ body {
 .result-value p:nth-child(1) {
     font-size: 20px;
     font-weight: 500;
+}
+
+.results-list {
+    background-color: #eee;
+    padding: .5rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.result-item {
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 0.5rem;
+    border-radius: .5rem;
+}
+
+.result-name {
+    font-size: 18px;
+}
+
+.result-button {
+    /* font-size: 12px; */
+    padding: .5rem 1rem;
 }
